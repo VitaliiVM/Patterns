@@ -5,12 +5,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Program {
-    public static String name;
+    public static String DeveloperName;
 
     public static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    public  static  void main(String[] args) throws IOException {
-        name = reader.readLine();
-        DeveloperFactory developerFactory = createDeveloperBySpecialty(name);
+    public static  void main(String[] args) throws IOException {
+        DeveloperName = reader.readLine();
+        DeveloperFactory developerFactory = createDeveloperBySpecialty(DeveloperName);
         Developer developer = developerFactory.createDeveloper();
         developer.writeCode();
     }
